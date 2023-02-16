@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@2.50.1/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <header class="bg-slate-800">
+        <div class="navbar text-white w-[80%] mx-auto shadow-md">
+            <div class="flex-1">
+              <a class="btn btn-ghost normal-case text-3xl">Shopping</a>
+            </div>
+            <div class="flex-none gap-2">
+              <div class="form-control">
+                <input type="text" placeholder="Search" class="input input-bordered text-slate-600" />
+              </div>
+              <div class="dropdown dropdown-end">
+                <label tabindex="0" class="btn btn-ghost btn-circle avatar">
+                  <div class="w-10 rounded-full">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQg1dIOAjqRZTG33LCikcTs75d2G2OJH9vnTA&usqp=CAU" />
+                  </div>
+                </label>
+                <ul tabindex="0" class="mt-3 p-2 shadow menu menu-compact dropdown-content bg-slate-700 rounded-box w-52">
+                  <li>
+                    <a class="justify-between">
+                      Profile
+                      <span class="badge">New</span>
+                    </a>
+                  </li>
+                  <li><a>Settings</a></li>
+                  <li><a>Logout</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+    </header>
+    <section class="py-8 w-[90%] mx-auto">
+        <div class="lg:flex gap-4">
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-3 w-[70%]">
+                <div class="card bg-base-100 shadow-xl">
+                    <figure><img src="/img/coffee.jpg" class="w-full h-40" alt="Shoes" /></figure>
+                    <div class="card-body flex-grow-0">
+                      <h2 class="card-title font-bold" id="coffee">Coffee js</h2>
+                      <p>Lorem ipsum dolor sit amet consectetur libero!</p>
+                      <p>Price: $<span id="coffee-price">110</span></p>
+                      <p>Quantity: <span id="coffee-quantity">5</span></p>
+                      <div class="card-actions justify-end">
+                        <button id="coffee-btn" class="btn btn-primary rounded-3xl">ADD TO CARD</button>
+                      </div>
+                    </div>
+                  </div>
+                <div class="card bg-base-100 shadow-xl">
+                    <figure><img src="/img/heart_js.jpg" class="w-full h-40" alt="Shoes" /></figure>
+                    <div class="card-body flex-grow-0">
+                      <h2 class="card-title font-bold" id="heart">heart js</h2>
+                      <p>Lorem ipsum dolor sit amet consectetur libero!</p>
+                      <p>Price: $<span id="heart-price">250</span></p>
+                      <p>Quantity: <span id="heart-quantity">2</span></p>
+                      <div class="card-actions justify-end">
+                        <button id="heart-btn" class="btn btn-primary rounded-3xl">ADD TO CARD</button>
+                      </div>
+                    </div>
+                  </div>
+                <div class="card bg-base-100 shadow-xl">
+                    <figure><img src="/img/panda.png" class="w-full h-40" alt="Shoes" /></figure>
+                    <div class="card-body flex-grow-0">
+                      <h2 class="card-title font-bold" id="panda">panda js</h2>
+                      <p>Lorem ipsum dolor sit amet consectetur libero!</p>
+                      <p>Price: $<span id="panda-price">200</span></p>
+                      <p>Quantity: <span id="panda-quantity">10</span></p>
+                      <div class="card-actions justify-end">
+                        <button id="panda-btn" class="btn btn-primary rounded-3xl">ADD TO CARD</button>
+                      </div>
+                    </div>
+                  </div>
+                <div class="card bg-base-100 shadow-xl">
+                    <figure><img src="/img/umbrella.png" class="w-full h-40" alt="Shoes" /></figure>
+                    <div class="card-body flex-grow-0">
+                      <h2 class="card-title font-bold" id="umbrella">umbrella js</h2>
+                      <p>Lorem ipsum dolor sit amet consectetur libero!</p>
+                      <p>Price: $<span id="umbrella-price">510</span></p>
+                      <p>Quantity: <span id="umbrella-quantity">5</span></p>
+                      <div class="card-actions justify-end">
+                        <button id="umbrella-btn" class="btn btn-primary rounded-3xl">ADD TO CARD</button>
+                      </div>
+                    </div>
+                  </div>
+                <div class="card bg-base-100 shadow-xl">
+                    <figure><img src="/img/vue-js.jpg" class="w-full h-40" alt="Shoes" /></figure>
+                    <div class="card-body flex-grow-0">
+                      <h2 class="card-title font-bold" id="vue">vue js</h2>
+                      <p>Lorem ipsum dolor sit amet consectetur libero!</p>
+                      <input type="text" id="price-input" class="my-1 py-1 px-2 rounded-md focus:border-none focus:outline-none bg-slate-100" placeholder="Price">
+                      <input type="text" id="quantity-input" class="py-1 px-2 rounded-md focus:border-none focus:outline-none bg-slate-100" placeholder="Quantity">
+                      <div class="card-actions justify-end">
+                        <button id="vue-btn" class="btn btn-primary rounded-3xl">ADD TO CARD</button>
+                      </div>
+                    </div>
+                  </div>
+            </div>
+            <div class="w-[30%]">
+                <div class="">
+                    <table class="table w-full">
+                      <!-- head -->
+                      <thead>
+                        <tr>
+                          <th>No</th>
+                          <th>NAME</th>
+                          <th>PRICE</th>
+                          <th>QUANTITY</th>
+                          <th>TOTAL</th>
+                        </tr>
+                      </thead>
+                      <tbody id="container">
+
+                      </tbody>
+                    </table>
+                  </div>
+            </div>
+        </div>
+    </section>
+    <script src="produc.js"></script>
+</body>
+</html>
